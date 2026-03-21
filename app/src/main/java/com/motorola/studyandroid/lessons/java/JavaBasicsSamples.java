@@ -1,4 +1,4 @@
-package com.motorola.studyandroid.lessons;
+package com.motorola.studyandroid.lessons.java;
 
 import java.util.ArrayList;
 import java.util.List;

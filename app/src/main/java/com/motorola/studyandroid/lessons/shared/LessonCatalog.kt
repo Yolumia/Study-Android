@@ -1,4 +1,4 @@
-package com.motorola.studyandroid.lessons
+package com.motorola.studyandroid.lessons.shared
 
 data class LessonEntry(
     val route: String,
@@ -202,10 +202,6 @@ object LessonCatalog {
 
     fun findByRoute(route: String?): LessonEntry? {
         return allLessons.firstOrNull { it.route == route }
-    }
-
-    fun findPartByLessonRoute(route: String?): LessonPart? {
-        return parts.firstOrNull { part -> part.lessons.any { it.route == route } }
     }
 }
 

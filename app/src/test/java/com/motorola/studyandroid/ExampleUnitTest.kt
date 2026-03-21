@@ -1,14 +1,14 @@
 package com.motorola.studyandroid
 
-import com.motorola.studyandroid.lessons.JavaBasicsSamples
-import com.motorola.studyandroid.lessons.JavaStudent
-import com.motorola.studyandroid.lessons.LessonCatalog
-import com.motorola.studyandroid.lessons.applyTransformation
-import com.motorola.studyandroid.lessons.formatProfile
-import com.motorola.studyandroid.lessons.multiply
-import com.motorola.studyandroid.lessons.nullableDisplayName
-import com.motorola.studyandroid.lessons.safeNameLength
-import com.motorola.studyandroid.lessons.sumAll
+import com.motorola.studyandroid.lessons.java.JavaBasicsSamples
+import com.motorola.studyandroid.lessons.java.JavaStudent
+import com.motorola.studyandroid.lessons.shared.LessonCatalog
+import com.motorola.studyandroid.lessons.shared.applyTransformation
+import com.motorola.studyandroid.lessons.shared.formatProfile
+import com.motorola.studyandroid.lessons.shared.multiply
+import com.motorola.studyandroid.lessons.shared.nullableDisplayName
+import com.motorola.studyandroid.lessons.shared.safeNameLength
+import com.motorola.studyandroid.lessons.shared.sumAll
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Test

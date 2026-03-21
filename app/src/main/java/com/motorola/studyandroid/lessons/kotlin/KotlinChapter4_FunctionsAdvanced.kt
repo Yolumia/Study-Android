@@ -1,5 +1,6 @@
-package com.motorola.studyandroid.lessons
+package com.motorola.studyandroid.lessons.kotlin
 
+import com.motorola.studyandroid.lessons.shared.*
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -70,6 +71,14 @@ fun KotlinChapter4_FunctionsAdvanced() {
                 FunctionAdvancedPlayground()
             }
         }
+
+        renderPracticeSection(
+            exercises = listOf(
+                "把 +5 的高阶函数处理改成 -3。",
+                "自己再写一个 applyTransformation(currentValue) { it / 2 } 的按钮。",
+                "尝试把 formatProfile 的默认城市改成你自己的城市。"
+            )
+        )
     }
 }
 
@@ -116,4 +125,3 @@ private fun KotlinChapter4Preview() {
         KotlinChapter4_FunctionsAdvanced()
     }
 }
-

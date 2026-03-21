@@ -1,5 +1,6 @@
-package com.motorola.studyandroid.lessons
+package com.motorola.studyandroid.lessons.java
 
+import com.motorola.studyandroid.lessons.shared.*
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -22,7 +23,7 @@ private data class CompareSection(
 )
 
 @Composable
-fun PreLesson4_JavaVsKotlin() {
+fun JavaLesson02JavaVsKotlinScreen() {
     val sections = listOf(
         CompareSection(
             title = "1. 先记结论：Android 新项目优先 Kotlin",
@@ -128,7 +129,7 @@ private fun JavaVsKotlinDemo() {
 @Composable
 private fun PreLesson4JavaVsKotlinPreview() {
     LessonPreviewContainer {
-        PreLesson4_JavaVsKotlin()
+        JavaLesson02JavaVsKotlinScreen()
     }
 }
 

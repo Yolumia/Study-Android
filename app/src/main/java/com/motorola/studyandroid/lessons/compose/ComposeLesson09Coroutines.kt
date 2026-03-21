@@ -1,5 +1,6 @@
-package com.motorola.studyandroid.lessons
+package com.motorola.studyandroid.lessons.compose
 
+import com.motorola.studyandroid.lessons.shared.*
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -30,7 +31,7 @@ private data class CoroutineSection(
 )
 
 @Composable
-fun Lesson9_Coroutines() {
+fun ComposeLesson09CoroutinesScreen() {
     val sections = listOf(
         CoroutineSection(
             title = "1. 为什么要学协程？",
@@ -150,7 +151,7 @@ private suspend fun fakeLoadGreeting(): String {
 @Composable
 private fun Lesson9CoroutinesPreview() {
     LessonPreviewContainer {
-        Lesson9_Coroutines()
+        ComposeLesson09CoroutinesScreen()
     }
 }
 

@@ -1,5 +1,7 @@
-package com.motorola.studyandroid.lessons
+package com.motorola.studyandroid.lessons.java
 
+import com.motorola.studyandroid.lessons.shared.*
+import com.motorola.studyandroid.lessons.java.JavaBasicsSamples
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -22,7 +24,7 @@ private data class JavaBasicsSection(
 )
 
 @Composable
-fun PreLesson3_JavaBasics() {
+fun JavaLesson01BasicsScreen() {
     val sections = listOf(
         JavaBasicsSection(
             title = "1. 为什么还要学一点 Java？",
@@ -152,7 +154,7 @@ private fun JavaObjectDemo() {
             style = MaterialTheme.typography.bodyMedium,
             modifier = Modifier.padding(top = 8.dp)
         )
-        loopResults.forEach { line ->
+        for (line in loopResults) {
             Text(
                 text = "Java for demo：$line",
                 style = MaterialTheme.typography.bodyMedium,
@@ -166,7 +168,7 @@ private fun JavaObjectDemo() {
 @Composable
 private fun PreLesson3JavaBasicsPreview() {
     LessonPreviewContainer {
-        PreLesson3_JavaBasics()
+        JavaLesson01BasicsScreen()
     }
 }
 

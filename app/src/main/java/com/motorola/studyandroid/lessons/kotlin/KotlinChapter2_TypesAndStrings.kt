@@ -1,5 +1,6 @@
-package com.motorola.studyandroid.lessons
+package com.motorola.studyandroid.lessons.kotlin
 
+import com.motorola.studyandroid.lessons.shared.*
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -60,6 +61,14 @@ fun KotlinChapter2_TypesAndStrings() {
                 TypesPlayground()
             }
         }
+
+        renderPracticeSection(
+            exercises = listOf(
+                "把 level 改成别的数字，看看文案如何变化。",
+                "自己新增一个 city 变量，并把它拼进字符串模板。",
+                "把普通用户和 VIP 用户的文案写得更有区别。"
+            )
+        )
     }
 }
 
@@ -92,4 +101,3 @@ private fun KotlinChapter2Preview() {
         KotlinChapter2_TypesAndStrings()
     }
 }
-

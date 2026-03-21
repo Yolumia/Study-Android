@@ -1,4 +1,4 @@
-package com.motorola.studyandroid.lessons
+package com.motorola.studyandroid.lessons.shared
 
 data class KotlinHero(
     val name: String,
@@ -6,9 +6,6 @@ data class KotlinHero(
     val title: String
 )
 
-fun formatGreeting(name: String, score: Int = 0): String {
-    return "你好，$name！当前积分：$score"
-}
 
 fun multiply(a: Int, b: Int): Int {
     return a * b

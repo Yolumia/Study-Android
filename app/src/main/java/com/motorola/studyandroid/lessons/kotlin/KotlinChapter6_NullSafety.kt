@@ -1,5 +1,6 @@
-package com.motorola.studyandroid.lessons
+package com.motorola.studyandroid.lessons.kotlin
 
+import com.motorola.studyandroid.lessons.shared.*
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -32,7 +33,7 @@ fun KotlinChapter6_NullSafety() {
             bullets = listOf(
                 "如果变量不为空，就继续调用。",
                 "如果变量为空，就直接得到 null。",
-                "它很适合接口数据、输入框数据这类“可能没有值”的场景。"
+                "它很适合接口数据、输入框数据这类可能没有值的场景。"
             ),
             code = "val nickName: String? = null\nval length = nickName?.length"
         ),
@@ -41,14 +42,14 @@ fun KotlinChapter6_NullSafety() {
             bullets = listOf(
                 "如果左边是 null，就用右边的值。",
                 "这在页面显示时非常常见。",
-                "比如用户还没登录、昵称还没拿到时，就先显示“游客”。"
+                "比如用户还没登录、昵称还没拿到时，就先显示游客。"
             ),
             code = "val showName = nickName ?: \"游客\""
         ),
         LearningSection(
             title = "4. 为什么新手阶段少用 !!",
             bullets = listOf(
-                "!! 表示“我保证它绝对不为空”。",
+                "!! 表示我保证它绝对不为空。",
                 "如果你保证错了，程序就会崩。",
                 "所以新手阶段优先用 ?. 和 ?:，会更安全。"
             )
@@ -57,17 +58,25 @@ fun KotlinChapter6_NullSafety() {
 
     LessonPage(
         title = "Kotlin 第 6 章：空安全 Null Safety",
-        subtitle = "这一章会让你第一次真正体会 Kotlin 的“安全感”来自哪里。后面你学网络请求、用户输入、数据库时，这个知识会反复出现。"
+        subtitle = "这一章会让你第一次真正体会 Kotlin 的安全感来自哪里。后面你学网络请求、用户输入、数据库时，这个知识会反复出现。"
     ) {
         renderLessonSections(sections)
 
         item {
             LessonSectionCard(title = "编程实验：名字可能为空时，页面如何安全显示") {
-                BulletLine("displayName 使用了 ?:，所以 null 时也能显示“游客”。")
+                BulletLine("displayName 使用了 ?:，所以 null 时也能显示游客。")
                 BulletLine("safeNameLength() 使用了 ?. 和 ?:，所以不会空指针崩溃。")
                 NullSafetyPlayground()
             }
         }
+
+        renderPracticeSection(
+            exercises = listOf(
+                "把默认显示名从游客改成别的词。",
+                "自己再写一个函数：name 为空时返回未登录。",
+                "想一想：为什么新手阶段尽量别乱用 !!。"
+            )
+        )
     }
 }
 
@@ -106,4 +115,3 @@ private fun KotlinChapter6Preview() {
         KotlinChapter6_NullSafety()
     }
 }
-

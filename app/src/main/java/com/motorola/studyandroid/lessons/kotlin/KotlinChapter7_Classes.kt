@@ -1,5 +1,6 @@
-package com.motorola.studyandroid.lessons
+package com.motorola.studyandroid.lessons.kotlin
 
+import com.motorola.studyandroid.lessons.shared.*
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -22,13 +23,13 @@ fun KotlinChapter7_Classes() {
             title = "1. class 是把数据和行为装到一起",
             bullets = listOf(
                 "类可以同时保存数据，也可以定义方法。",
-                "如果说函数是“做事的单位”，类就是“组织数据和行为的容器”。",
+                "如果说函数是做事的单位，类就是组织数据和行为的容器。",
                 "以后你写 ViewModel、数据模型、状态对象时都会频繁接触类。"
             ),
             code = "class User(val name: String, val level: Int)"
         ),
         LearningSection(
-            title = "2. data class 很适合放“纯数据”",
+            title = "2. data class 很适合放纯数据",
             bullets = listOf(
                 "data class 是 Kotlin 非常常见的数据模型写法。",
                 "它会自动帮你生成 toString、equals、copy 等常用能力。",
@@ -48,7 +49,7 @@ fun KotlinChapter7_Classes() {
 
     LessonPage(
         title = "Kotlin 第 7 章：类、data class、对象",
-        subtitle = "这一章把你从“只会写函数”推进到“会组织数据结构”。你会发现：Kotlin 的很多强大之处，恰恰在于函数和 data class 配合得很好。"
+        subtitle = "这一章把你从只会写函数推进到会组织数据结构。你会发现：Kotlin 的很多强大之处，恰恰在于函数和 data class 配合得很好。"
     ) {
         renderLessonSections(sections)
 
@@ -59,6 +60,14 @@ fun KotlinChapter7_Classes() {
                 ClassPlayground()
             }
         }
+
+        renderPracticeSection(
+            exercises = listOf(
+                "给 KotlinHero 再增加一个 hp 字段。",
+                "把 createHero() 里 title 的判定阈值改掉。",
+                "试着新增一个函数，专门返回 hero 的展示文案。"
+            )
+        )
     }
 }
 
@@ -95,4 +104,3 @@ private fun KotlinChapter7Preview() {
         KotlinChapter7_Classes()
     }
 }
-

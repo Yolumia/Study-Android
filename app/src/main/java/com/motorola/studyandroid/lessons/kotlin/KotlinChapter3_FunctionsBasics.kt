@@ -1,5 +1,6 @@
-package com.motorola.studyandroid.lessons
+package com.motorola.studyandroid.lessons.kotlin
 
+import com.motorola.studyandroid.lessons.shared.*
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -24,7 +25,7 @@ fun KotlinChapter3_FunctionsBasics() {
             bullets = listOf(
                 "函数就是把一段逻辑起名字。这样你以后想重复使用时，直接调用它就行。",
                 "函数有三个核心：函数名、参数、返回值。",
-                "你以后写 Compose 页面时，`@Composable fun Xxx()` 本质上也还是函数。"
+                "你以后写 Compose 页面时，@Composable fun Xxx() 本质上也还是函数。"
             ),
             code = "fun add(a: Int, b: Int): Int {\n    return a + b\n}"
         ),
@@ -69,6 +70,14 @@ fun KotlinChapter3_FunctionsBasics() {
                 FunctionBasicsPlayground()
             }
         }
+
+        renderPracticeSection(
+            exercises = listOf(
+                "自己新增一个 divide(a, b) 函数，并在页面上显示结果。",
+                "把 subtract 的结果文案改得更清楚一点。",
+                "试着说出：参数和返回值分别在这个 demo 里扮演什么角色。"
+            )
+        )
     }
 }
 
@@ -120,4 +129,3 @@ private fun KotlinChapter3Preview() {
         KotlinChapter3_FunctionsBasics()
     }
 }
-

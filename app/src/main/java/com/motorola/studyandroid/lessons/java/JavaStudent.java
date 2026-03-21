@@ -1,4 +1,4 @@
-package com.motorola.studyandroid.lessons;
+package com.motorola.studyandroid.lessons.java;
 
 public class JavaStudent {
     private final String name;

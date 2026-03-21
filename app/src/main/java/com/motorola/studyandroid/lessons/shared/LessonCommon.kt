@@ -1,14 +1,15 @@
-package com.motorola.studyandroid.lessons
+package com.motorola.studyandroid.lessons.shared
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.LazyListScope
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyListScope
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -105,7 +106,7 @@ fun LessonPage(
         modifier = Modifier
             .fillMaxSize()
             .padding(horizontal = 16.dp),
-        contentPadding = androidx.compose.foundation.layout.PaddingValues(vertical = 16.dp)
+        contentPadding = PaddingValues(vertical = 16.dp)
     ) {
         item {
             LessonHeader(title = title, subtitle = subtitle)
@@ -126,6 +127,17 @@ fun LazyListScope.renderLessonSections(sections: List<LearningSection>) {
     }
 }
 
+fun LazyListScope.renderPracticeSection(
+    exercises: List<String>,
+    title: String = "课后小练习"
+) {
+    item {
+        LessonSectionCard(title = title, modifier = Modifier.padding(bottom = 12.dp)) {
+            exercises.forEach { BulletLine(it) }
+        }
+    }
+}
+
 @Composable
 fun LessonPreviewContainer(content: @Composable () -> Unit) {
     StudyAndroidTheme {
@@ -134,4 +146,3 @@ fun LessonPreviewContainer(content: @Composable () -> Unit) {
         }
     }
 }
-

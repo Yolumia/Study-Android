@@ -1,5 +1,6 @@
-package com.motorola.studyandroid.lessons
+package com.motorola.studyandroid.lessons.kotlin
 
+import com.motorola.studyandroid.lessons.shared.*
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -40,7 +41,7 @@ fun KotlinChapter5_Collections() {
             title = "3. 集合和函数经常一起出现",
             bullets = listOf(
                 "比如把多个任务传给函数，再拼成一段总结文案。",
-                "这也是“函数 + 集合”的典型组合。",
+                "这也是函数 + 集合的典型组合。",
                 "理解这一点后，你看列表页面会轻松很多。"
             ),
             code = "fun buildTaskSummary(tasks: List<String>): String {\n    return tasks.joinToString(separator = \"、\")\n}"
@@ -60,6 +61,14 @@ fun KotlinChapter5_Collections() {
                 CollectionsPlayground()
             }
         }
+
+        renderPracticeSection(
+            exercises = listOf(
+                "给 taskGroup 再多加两个任务。",
+                "尝试把 forEach 改成普通 for 来显示列表。",
+                "自己写一个函数，把任务数量也拼到 summary 里。"
+            )
+        )
     }
 }
 
@@ -97,4 +106,3 @@ private fun KotlinChapter5Preview() {
         KotlinChapter5_Collections()
     }
 }
-

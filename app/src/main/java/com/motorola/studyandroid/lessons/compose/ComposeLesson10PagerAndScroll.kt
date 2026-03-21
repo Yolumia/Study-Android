@@ -1,5 +1,6 @@
-package com.motorola.studyandroid.lessons
+package com.motorola.studyandroid.lessons.compose
 
+import com.motorola.studyandroid.lessons.shared.*
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -31,49 +32,57 @@ private val pagerPages = listOf(
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun Lesson10_PagerAndScroll() {
+fun ComposeLesson10PagerAndScrollScreen() {
     val sections = listOf(
         LearningSection(
-            title = "1. 横向滚动不等于只有一种实现",
+            title = "1. 横向滚动不止一种实现方式",
             bullets = listOf(
-                "如果你只是让一排内容能左右滚动，可以用 horizontalScroll。",
-                "如果你要显示很多横向列表项，通常会用 LazyRow。",
-                "如果你要做“整页切换”的学习 Part，HorizontalPager 更合适。"
+                "单纯让内容横向滑，可以考虑 horizontalScroll。",
+                "展示很多横向条目时，通常会用 LazyRow。",
+                "当你要切换整页内容时，HorizontalPager 更自然。"
             ),
             code = "Modifier.horizontalScroll(...)\nLazyRow { ... }\nHorizontalPager(state = pagerState) { page -> ... }"
         ),
         LearningSection(
-            title = "2. 为什么首页适合 HorizontalPager？",
+            title = "2. 为什么课程首页适合用 HorizontalPager？",
             bullets = listOf(
-                "因为首页不是在横向摆一堆小卡片，而是在切换“整组课程”。",
-                "每个 Part 都像一个完整页面，所以 pager 的语义更自然。",
-                "这也是为什么你现在的课程首页已经改成了左右滑动切 Part。"
+                "因为首页切换的是整组课程 Part，不是几张小卡片。",
+                "每一页都是完整的学习区域，所以 pager 的语义更合适。",
+                "这也是为什么你现在这个项目首页已经用上了 HorizontalPager。"
             )
         ),
         LearningSection(
-            title = "3. Pager 最常见的配套元素",
+            title = "3. Pager 常见配套：TabRow + pagerState + 协程",
             bullets = listOf(
-                "pagerState：记录当前是第几页。",
-                "TabRow：显示顶部页签，让用户可以点选切换。",
-                "CoroutineScope：因为滚动到指定页通常要在协程里调用 scrollToPage / animateScrollToPage。"
+                "TabRow 负责显示当前页签。",
+                "pagerState 记录当前页。",
+                "切换到指定页面时，经常会用协程调用 animateScrollToPage。"
             ),
-            code = "val pagerState = rememberPagerState(pageCount = { 3 })\nval scope = rememberCoroutineScope()\n\nscope.launch {\n    pagerState.animateScrollToPage(1)\n}"
+            code = "val pagerState = rememberPagerState(pageCount = { 3 })\nval scope = rememberCoroutineScope()\nscope.launch { pagerState.animateScrollToPage(1) }"
         )
     )
 
     LessonPage(
-        title = "Lesson 10：横向滚动与分页 HorizontalPager",
-        subtitle = "这节课不仅讲知识点，还直接解释你当前项目首页为什么能左右滑动切换学习 Part。学完这节课，你就能看懂项目本身的一部分实现。"
+        title = "Compose 第 7 章：横向滚动与分页 HorizontalPager",
+        subtitle = "这一课不仅讲知识点，还直接解释你当前项目首页为什么能左右滑动切换学习 Part。学完它，你会更容易读懂项目本身的实现。"
     ) {
         renderLessonSections(sections)
 
         item {
             LessonSectionCard(title = "编程实验：一个最小可运行的 HorizontalPager") {
                 BulletLine("点顶部 Tab 或点按钮，都可以切换页。")
-                BulletLine("这个例子和首页“横向切换学习 Part”的实现思路是一样的。")
+                BulletLine("这个例子和首页横向切换学习 Part 的实现思路是一样的。")
                 PagerPlayground()
             }
         }
+
+        renderPracticeSection(
+            exercises = listOf(
+                "把 pagerPages 再加一页，观察 Tab 和页面数如何一起变化。",
+                "把切到下一页按钮改成切到上一页。",
+                "试着把某一页背景色改掉，让分页切换更明显。"
+            )
+        )
     }
 }
 
@@ -92,9 +101,7 @@ private fun PagerPlayground() {
             pagerPages.forEachIndexed { index, title ->
                 Tab(
                     selected = pagerState.currentPage == index,
-                    onClick = {
-                        scope.launch { pagerState.animateScrollToPage(index) }
-                    },
+                    onClick = { scope.launch { pagerState.animateScrollToPage(index) } },
                     text = { Text(title) }
                 )
             }
@@ -110,7 +117,7 @@ private fun PagerPlayground() {
             ) {
                 Text(text = pagerPages[page], style = MaterialTheme.typography.titleMedium)
                 Text(
-                    text = "当前页码：$page。试着继续左右滑动，感受整页切换和 LazyRow 的区别。",
+                    text = "当前页码：$page。继续左右滑动，感受整页切换和普通横向列表的区别。",
                     style = MaterialTheme.typography.bodyMedium,
                     modifier = Modifier.padding(top = 8.dp)
                 )
@@ -130,9 +137,8 @@ private fun PagerPlayground() {
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
-private fun Lesson10PagerPreview() {
+private fun ComposeLesson10PagerAndScrollPreview() {
     LessonPreviewContainer {
-        Lesson10_PagerAndScroll()
+        ComposeLesson10PagerAndScrollScreen()
     }
 }
-

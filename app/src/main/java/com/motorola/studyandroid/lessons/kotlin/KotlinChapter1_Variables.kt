@@ -1,5 +1,6 @@
-package com.motorola.studyandroid.lessons
+package com.motorola.studyandroid.lessons.kotlin
 
+import com.motorola.studyandroid.lessons.shared.*
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -59,6 +60,14 @@ fun KotlinChapter1_Variables() {
                 VariablePlayground()
             }
         }
+
+        renderPracticeSection(
+            exercises = listOf(
+                "把 score 的初始值改成 10。",
+                "自己再加一个 var lives，并显示到页面上。",
+                "想一想：为什么 playerName 更适合 val？"
+            )
+        )
     }
 }
 
@@ -90,4 +99,3 @@ private fun KotlinChapter1Preview() {
         KotlinChapter1_Variables()
     }
 }
-
