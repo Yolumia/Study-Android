@@ -19,7 +19,15 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.motorola.studyandroid.lessons.KotlinChapter1_Variables
+import com.motorola.studyandroid.lessons.KotlinChapter2_TypesAndStrings
+import com.motorola.studyandroid.lessons.KotlinChapter3_FunctionsBasics
+import com.motorola.studyandroid.lessons.KotlinChapter4_FunctionsAdvanced
+import com.motorola.studyandroid.lessons.KotlinChapter5_Collections
+import com.motorola.studyandroid.lessons.KotlinChapter6_NullSafety
+import com.motorola.studyandroid.lessons.KotlinChapter7_Classes
 import com.motorola.studyandroid.lessons.Lesson0_GettingStarted
+import com.motorola.studyandroid.lessons.Lesson10_PagerAndScroll
 import com.motorola.studyandroid.lessons.Lesson1_Text
 import com.motorola.studyandroid.lessons.Lesson2_Layout
 import com.motorola.studyandroid.lessons.Lesson3_State
@@ -28,8 +36,12 @@ import com.motorola.studyandroid.lessons.Lesson5_Input
 import com.motorola.studyandroid.lessons.Lesson6_Image
 import com.motorola.studyandroid.lessons.Lesson7_Network
 import com.motorola.studyandroid.lessons.Lesson8_Navigation
+import com.motorola.studyandroid.lessons.Lesson9_Coroutines
 import com.motorola.studyandroid.lessons.LessonCatalog
+import com.motorola.studyandroid.lessons.LessonPreviewContainer
 import com.motorola.studyandroid.lessons.LessonsMenu
+import com.motorola.studyandroid.lessons.PreLesson3_JavaBasics
+import com.motorola.studyandroid.lessons.PreLesson4_JavaVsKotlin
 import com.motorola.studyandroid.ui.theme.StudyAndroidTheme
 
 @OptIn(androidx.compose.material3.ExperimentalMaterial3Api::class)
@@ -93,17 +105,28 @@ class MainActivity : ComponentActivity() {
                             }
                         }
 
+                        composable(LessonCatalog.kotlinVariables.route) { KotlinChapter1_Variables() }
+                        composable(LessonCatalog.kotlinTypesStrings.route) { KotlinChapter2_TypesAndStrings() }
+                        composable(LessonCatalog.kotlinFunctionsBasics.route) { KotlinChapter3_FunctionsBasics() }
+                        composable(LessonCatalog.kotlinFunctionsAdvanced.route) { KotlinChapter4_FunctionsAdvanced() }
+                        composable(LessonCatalog.kotlinCollections.route) { KotlinChapter5_Collections() }
+                        composable(LessonCatalog.kotlinNullSafety.route) { KotlinChapter6_NullSafety() }
+                        composable(LessonCatalog.kotlinClasses.route) { KotlinChapter7_Classes() }
+                        composable(LessonCatalog.javaBasics.route) { PreLesson3_JavaBasics() }
+                        composable(LessonCatalog.javaVsKotlin.route) { PreLesson4_JavaVsKotlin() }
                         composable(LessonCatalog.gettingStarted.route) { Lesson0_GettingStarted() }
                         composable(LessonCatalog.text.route) { Lesson1_Text() }
                         composable(LessonCatalog.layout.route) { Lesson2_Layout() }
                         composable(LessonCatalog.state.route) { Lesson3_State() }
                         composable(LessonCatalog.list.route) { Lesson4_List() }
                         composable(LessonCatalog.input.route) { Lesson5_Input() }
+                        composable(LessonCatalog.pagerAndScroll.route) { Lesson10_PagerAndScroll() }
                         composable(LessonCatalog.image.route) { Lesson6_Image() }
                         composable(LessonCatalog.network.route) { Lesson7_Network() }
                         composable(LessonCatalog.navigation.route) {
                             Lesson8_Navigation(onNavigate = navigateToRoute)
                         }
+                        composable(LessonCatalog.coroutines.route) { Lesson9_Coroutines() }
                     }
                 }
             }
@@ -111,18 +134,10 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+@Preview(showBackground = true, showSystemUi = true)
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    StudyAndroidTheme {
-        Greeting("Android")
+fun LessonsMenuPreview() {
+    LessonPreviewContainer {
+        LessonsMenu(onLessonSelect = {})
     }
 }

@@ -1,13 +1,23 @@
 package com.motorola.studyandroid.lessons
 
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material3.Button
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 private data class StarterSection(
@@ -82,9 +92,11 @@ fun Lesson0_GettingStarted() {
         StarterSection(
             title = "8. 你现在这套课程建议怎么学？",
             bullets = listOf(
-                "先看 Lesson 0，搞清大地图。",
-                "再按 1 → 5 学基础 UI：文字、布局、状态、列表、输入。",
-                "接着看 6 → 8：图片、网络、导航，开始像一个真正 App 那样思考。",
+                "如果你是完全零基础，先进入首页的 Part 1，把 Kotlin 7 章按顺序学完，尤其要认真学函数两章。",
+                "然后再学 Part 2 的 Java，两章就够你建立老项目阅读能力。",
+                "再看 Lesson 0，搞清 Android 和 Compose 的大地图。",
+                "接着进入 Part 3：文字、布局、状态、列表、输入、横向分页。",
+                "最后学习 Part 4：图片、网络、导航、协程，开始像一个真正 App 那样思考。",
                 "每学完一课，建议你自己改 1~2 个数字或颜色，观察 UI 为什么变化。"
             )
         )
@@ -120,6 +132,46 @@ fun Lesson0_GettingStarted() {
                 BulletLine("回到 MainActivity，找到 Scaffold 和 NavHost，尝试说出它们各自的作用。")
             }
         }
+
+        item {
+            LessonSectionCard(title = "动手看效果：Compose 页面为什么会自动刷新？") {
+                BulletLine("点击按钮后，count 状态发生变化。")
+                BulletLine("因为 Text 依赖了 count，所以 Compose 会自动重新计算这块 UI。")
+                BulletLine("这就是你后面学习 State、输入框、网络加载时的核心思想。")
+                ComposeStateMiniDemo()
+            }
+        }
+    }
+}
+
+@Composable
+private fun ComposeStateMiniDemo() {
+    var count by remember { mutableIntStateOf(0) }
+
+    Column(modifier = Modifier.fillMaxWidth()) {
+        Text(
+            text = "当前 count = $count",
+            style = MaterialTheme.typography.titleMedium
+        )
+        Text(
+            text = "你每点一次按钮，状态就更新一次，界面也会自动跟着变。",
+            style = MaterialTheme.typography.bodyMedium,
+            modifier = Modifier.padding(top = 8.dp)
+        )
+        Button(
+            onClick = { count++ },
+            modifier = Modifier.padding(top = 12.dp)
+        ) {
+            Text("点我 +1")
+        }
+    }
+}
+
+@Preview(showBackground = true, showSystemUi = true)
+@Composable
+private fun Lesson0GettingStartedPreview() {
+    LessonPreviewContainer {
+        Lesson0_GettingStarted()
     }
 }
 
