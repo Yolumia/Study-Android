@@ -42,27 +42,27 @@
 ### Part 2：Java 补充与互操作
 目标：让你能看懂老 Android 代码，并理解 Kotlin/Java 在一个项目里如何共存。
 
-- `PreLesson3_JavaBasics.kt`
-- `PreLesson4_JavaVsKotlin.kt`
+- `PreLesson3_JavaBasics.kt`（入口函数：`JavaLesson01BasicsScreen()`）
+- `PreLesson4_JavaVsKotlin.kt`（入口函数：`JavaLesson02JavaVsKotlinScreen()`）
 
 ### Part 3：Compose 基础与交互
 目标：搞懂页面怎么写、为什么会自动刷新、为什么首页可以左右滑动切换 Part。
 
-- `Lesson0_GettingStarted.kt`
-- `Lesson1_Text.kt`
-- `Lesson2_Layout.kt`
-- `Lesson3_State.kt`
-- `Lesson4_List.kt`
-- `Lesson5_Input.kt`
-- `Lesson10_PagerAndScroll.kt`
+- `ComposeLesson00GettingStarted.kt`
+- `ComposeLesson01Text.kt`
+- `ComposeLesson02Layout.kt`
+- `ComposeLesson03State.kt`
+- `ComposeLesson04List.kt`
+- `ComposeLesson05Input.kt`
+- `ComposeLesson10PagerAndScroll.kt`
 
 ### Part 4：Compose 实战与异步
 目标：开始像真实 App 一样思考页面、异步任务和页面跳转。
 
-- `Lesson6_Image.kt`
-- `Lesson7_Network.kt`
-- `Lesson8_Navigation.kt`
-- `Lesson9_Coroutines.kt`
+- `ComposeLesson06Image.kt`
+- `ComposeLesson07Network.kt`
+- `ComposeLesson08Navigation.kt`
+- `ComposeLesson09Coroutines.kt`
 
 ## 这个项目现在是怎么“通过编程教学”的？
 
@@ -172,6 +172,7 @@
 
 #### Java 第 1 章：基础语法 + 真实 Java Demo
 文件：`lessons/java/PreLesson3_JavaBasics.kt`
+- 入口函数：`JavaLesson01BasicsScreen()`
 - 真实 Java 示例文件：`lessons/java/JavaStudent.java`、`lessons/java/JavaBasicsSamples.java`
 - Java 变量和常见类型
 - 方法和类
@@ -182,6 +183,7 @@
 
 #### Java 第 2 章：Java 和 Kotlin 怎么选？
 文件：`lessons/java/PreLesson4_JavaVsKotlin.kt`
+- 入口函数：`JavaLesson02JavaVsKotlinScreen()`
 - 为什么 Android 新项目优先 Kotlin
 - Java 和 Kotlin 常见语法对照
 - 作为零基础该怎么安排语言学习顺序
@@ -191,7 +193,8 @@
 ### Part 3：Compose 基础与交互
 
 #### Lesson 0：先认识 Android 与 Compose（补课）
-文件：`lessons/compose/Lesson0_GettingStarted.kt`
+文件：`lessons/compose/ComposeLesson00GettingStarted.kt`
+- 入口函数：`ComposeLesson00GettingStartedScreen()`
 - 什么是 `Activity`
 - 什么是 `setContent {}`
 - 什么是 `@Composable`
@@ -203,36 +206,42 @@
 - 带 `Compose Preview`
 
 #### Lesson 1：Text 文字基础
-文件：`lessons/compose/Lesson1_Text.kt`
+文件：`lessons/compose/ComposeLesson01Text.kt`
+- 入口函数：`ComposeLesson01TextScreen()`
 - 显示文字
 - 修改字号、颜色、粗细
 
 #### Lesson 2：布局基础
-文件：`lessons/compose/Lesson2_Layout.kt`
+文件：`lessons/compose/ComposeLesson02Layout.kt`
+- 入口函数：`ComposeLesson02LayoutScreen()`
 - `Row`：横向排列
 - `Column`：纵向排列
 - `Box`：叠层布局
 
 #### Lesson 3：State 状态
-文件：`lessons/compose/Lesson3_State.kt`
+文件：`lessons/compose/ComposeLesson03State.kt`
+- 入口函数：`ComposeLesson03StateScreen()`
 - `remember`
 - `mutableStateOf`
 - 点击按钮后界面为什么会更新
 
 #### Lesson 4：列表 LazyColumn
-文件：`lessons/compose/Lesson4_List.kt`
+文件：`lessons/compose/ComposeLesson04List.kt`
+- 入口函数：`ComposeLesson04ListScreen()`
 - 列表头部和底部
 - `item {}` 和 `items {}`
 - 为什么 LazyColumn 比一次性全部渲染更高效
 
 #### Compose 第 6 章：用户输入
-文件：`lessons/compose/Lesson5_Input.kt`
+文件：`lessons/compose/ComposeLesson05Input.kt`
+- 入口函数：`ComposeLesson05InputScreen()`
 - `OutlinedTextField`
 - 输入内容绑定到状态
 - 按钮点击后做简单逻辑处理
 
 #### Compose 第 7 章：横向滚动与分页
-文件：`lessons/compose/Lesson10_PagerAndScroll.kt`
+文件：`lessons/compose/ComposeLesson10PagerAndScroll.kt`
+- 入口函数：`ComposeLesson10PagerAndScrollScreen()`
 - `horizontalScroll`
 - `LazyRow`
 - `HorizontalPager`
@@ -243,28 +252,32 @@
 ### Part 4：Compose 实战与异步
 
 #### Lesson 6：网络图片
-文件：`lessons/compose/Lesson6_Image.kt`
+文件：`lessons/compose/ComposeLesson06Image.kt`
+- 入口函数：`ComposeLesson06ImageScreen()`
 - `AsyncImage`
 - 圆角裁剪
 - 圆形头像
 - `contentScale`
 
 #### Lesson 7：网络请求
-文件：`lessons/compose/Lesson7_Network.kt`
+文件：`lessons/compose/ComposeLesson07Network.kt`
+- 入口函数：`ComposeLesson07NetworkScreen()`
 - Retrofit 基础用法
 - 数据模型 `data class`
 - 接口定义 `@GET`
 - 加载中 / 成功 / 失败 三种状态
 
 #### Lesson 8：导航基础
-文件：`lessons/compose/Lesson8_Navigation.kt`
+文件：`lessons/compose/ComposeLesson08Navigation.kt`
+- 入口函数：`ComposeLesson08NavigationScreen()`
 - 什么是 route
 - `NavController`、`NavHost`、`composable`
 - `navigate()` 和 `popBackStack()`
 - 返回栈是什么
 
 #### Lesson 9：协程 Coroutines 入门
-文件：`lessons/compose/Lesson9_Coroutines.kt`
+文件：`lessons/compose/ComposeLesson09Coroutines.kt`
+- 入口函数：`ComposeLesson09CoroutinesScreen()`
 - 为什么 UI 线程不能被耗时任务堵住
 - `suspend`
 - `launch`
@@ -299,12 +312,12 @@
 
 - 给 `lessons/kotlin/KotlinChapter1_Variables.kt` 里的变量名改一个你自己的名字。
 - 给 `lessons/kotlin/KotlinChapter6_NullSafety.kt` 自己再写一个 `?:` 默认值例子。
-- 对照 `PreLesson3_JavaBasics.kt`，试着把一段 Java 变量声明翻成 Kotlin。
-- 打开 `lessons/compose/Lesson9_Coroutines.kt`，把 `delay(1000)` 改成 `delay(3000)`。
-- 把 `lessons/compose/Lesson1_Text.kt` 里的颜色改掉。
-- 给 `lessons/compose/Lesson2_Layout.kt` 多加两个 `Box`。
-- 给 `lessons/compose/Lesson3_State.kt` 增加“+10”按钮。
-- 给 `lessons/compose/Lesson5_Input.kt` 增加一个“职业”输入框。
+- 对照 `lessons/java/PreLesson3_JavaBasics.kt`，试着把一段 Java 变量声明翻成 Kotlin。
+- 打开 `lessons/compose/ComposeLesson09Coroutines.kt`，把 `delay(1000)` 改成 `delay(3000)`。
+- 把 `lessons/compose/ComposeLesson01Text.kt` 里的颜色改掉。
+- 给 `lessons/compose/ComposeLesson02Layout.kt` 多加两个 `Box`。
+- 给 `lessons/compose/ComposeLesson03State.kt` 增加“+10”按钮。
+- 给 `lessons/compose/ComposeLesson05Input.kt` 增加一个“职业”输入框。
 - 在 `lessons/shared/LessonCatalog.kt` 新增一门你自己的课程。
 
 学 Android 不怕慢，怕的是“看懂了但没自己改”。每课你都亲手改一点，进步会非常快。
