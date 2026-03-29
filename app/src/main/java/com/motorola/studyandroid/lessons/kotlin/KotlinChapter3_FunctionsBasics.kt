@@ -54,6 +54,17 @@ fun KotlinChapter3_FunctionsBasics() {
                 "列表格式化、用户名显示、价格计算，也经常封装成函数。",
                 "这样页面代码会更清晰，不会所有逻辑都堆在 onClick 里。"
             )
+        ),
+        LearningSection(
+            title = "5. 函数作为『一等公民』：四大函数类型",
+            bullets = listOf(
+                "在 Kotlin 中，函数可以直接当成变量传递，这叫函数类型 (Function Type)。",
+                "① 普通函数类型：如 (Int, Int) -> Int，表示接收两个 Int，返回一个 Int。",
+                "② 带接收者的函数类型：如 String.() -> Int，调用时可以像扩展函数一样用 this。",
+                "③ 挂起函数类型：如 suspend () -> Unit，专用于协程，处理网络请求等耗时任务。",
+                "④ 可空函数类型：如 ((Int) -> Unit)?，表示这个回调函数可以不传（是 null）。"
+            ),
+            code = "val myAdd: (Int, Int) -> Int = { x, y -> x + y }\nval onClick: (() -> Unit)? = null"
         )
     )
 

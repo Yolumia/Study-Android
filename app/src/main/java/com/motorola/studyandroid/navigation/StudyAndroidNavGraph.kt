@@ -18,6 +18,7 @@ import com.motorola.studyandroid.lessons.compose.ComposeChapter09CoroutinesScree
 import com.motorola.studyandroid.lessons.compose.ComposeChapter10PagerAndScrollScreen
 import com.motorola.studyandroid.lessons.java.JavaLesson01BasicsScreen
 import com.motorola.studyandroid.lessons.java.JavaLesson02JavaVsKotlinScreen
+import com.motorola.studyandroid.lessons.java.JavaChapter3ListScreen
 import com.motorola.studyandroid.lessons.kotlin.KotlinChapter1_Variables
 import com.motorola.studyandroid.lessons.kotlin.KotlinChapter2_TypesAndStrings
 import com.motorola.studyandroid.lessons.kotlin.KotlinChapter3_FunctionsBasics
@@ -45,6 +46,7 @@ fun StudyAndroidNavGraph(
         composable(LessonCatalog.kotlinClasses.route) { KotlinChapter7_Classes() }
         composable(LessonCatalog.javaBasics.route) { JavaLesson01BasicsScreen() }
         composable(LessonCatalog.javaVsKotlin.route) { JavaLesson02JavaVsKotlinScreen() }
+        composable(LessonCatalog.javaList.route) { JavaChapter3ListScreen() }
         composable(LessonCatalog.gettingStarted.route) { ComposeChapter00GettingStartedScreen() }
         composable(LessonCatalog.text.route) { ComposeChapter01TextScreen() }
         composable(LessonCatalog.layout.route) { ComposeChapter02LayoutScreen() }
@@ -58,4 +60,3 @@ fun StudyAndroidNavGraph(
         composable(LessonCatalog.coroutines.route) { ComposeChapter09CoroutinesScreen() }
     }
 }
-

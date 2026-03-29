@@ -78,7 +78,14 @@ object LessonCatalog {
     val javaVsKotlin = LessonEntry(
         route = "PreLesson4",
         title = "Java 第 2 章：Java 和 Kotlin 怎么选？",
-        description = "通过对照代码理解为什么 Compose 主线用 Kotlin。",
+        description = "通过并排对比相同的逻辑，讲解在 Android 开发中什么时候用 Java，什么时候用 Kotlin。",
+        partTitle = "Part 2：Java 补充与互操作"
+    )
+
+    val javaList = LessonEntry(
+        route = "JavaChapter3_List",
+        title = "Java 第 3 章：集合之 List",
+        description = "真正理解 ArrayList，它是 Java 里用的最多、最重要的用来存列表的地方。",
         partTitle = "Part 2：Java 补充与互操作"
     )
 
@@ -180,7 +187,7 @@ object LessonCatalog {
             title = "Part 2：Java 补充与互操作",
             description = "不是死记概念，而是通过真实 Java 文件看懂老 Android 代码，并理解 Kotlin/Java 互调。",
             swipeTip = "这一 Part 建议放在 Kotlin 之后学习，因为你会更容易理解 Java 为什么更啰嗦。",
-            lessons = listOf(javaBasics, javaVsKotlin)
+            lessons = listOf(javaBasics, javaVsKotlin, javaList)
         ),
         LessonPart(
             route = "PartCompose",
@@ -204,4 +211,3 @@ object LessonCatalog {
         return allLessons.firstOrNull { it.route == route }
     }
 }
-

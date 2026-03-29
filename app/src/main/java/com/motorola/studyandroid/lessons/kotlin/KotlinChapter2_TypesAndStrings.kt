@@ -45,6 +45,14 @@ fun KotlinChapter2_TypesAndStrings() {
                 "比如是否登录、是否会员、按钮是否可点击，背后都常常是 Boolean。",
                 "下一章和函数一起写逻辑时，你会更常看到这种组合。"
             )
+        ),
+        LearningSection(
+            title = "4. 什么是 State (状态) 与重组重绘？（非常重要！）",
+            bullets = listOf(
+                "当下面代码中 belongsTo mutableStateOf(false) 的 isVip 变量从 false 被修改为 true 时，发生了一件神奇的事：",
+                "Compose 发现 isVip 变了，它会自动把使用到这个变量所在的函数 TypesPlayground() 从头到尾重新运行一次（但外层的 KotlinChapter2 不会重新运行，这是它的智能重绘机制）。",
+                "在这个重新运行的过程中，代码再次走到 if(isVip) 时，进到了 true 的逻辑分支里，拿到了全新的 summary 字符串去更新界面。这就叫作『数据驱动 UI』。"
+            )
         )
     )
 
