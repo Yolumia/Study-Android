@@ -56,7 +56,7 @@ object RetrofitClient {
 }
 
 @Composable
-fun ComposeLesson07NetworkScreen() {
+fun ComposeChapter07NetworkScreen() {
     var posts by remember { mutableStateOf<List<Post>>(emptyList()) }
     var isLoading by remember { mutableStateOf(true) }
     var errorMessage by remember { mutableStateOf<String?>(null) }
@@ -188,7 +188,7 @@ private fun NetworkPlayground(
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
-private fun ComposeLesson07NetworkPreview() {
+private fun ComposeChapter07NetworkPreview() {
     LessonPreviewContainer {
         LessonPage(
             title = "实战第 2 章：网络请求 Retrofit",

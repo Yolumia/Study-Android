@@ -24,7 +24,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun ComposeLesson02LayoutScreen() {
+fun ComposeChapter02LayoutScreen() {
     val sections = listOf(
         LearningSection(
             title = "1. Row / Column / Box 是 Compose 三个最基础的布局容器",
@@ -139,8 +139,8 @@ private fun ColorBlock(color: Color, label: String, size: androidx.compose.ui.un
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
-private fun ComposeLesson02LayoutPreview() {
+private fun ComposeChapter02LayoutPreview() {
     LessonPreviewContainer {
-        ComposeLesson02LayoutScreen()
+        ComposeChapter02LayoutScreen()
     }
 }

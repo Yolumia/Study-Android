@@ -28,7 +28,7 @@ import coil.request.ImageRequest
 private const val DemoImageUrl = "https://himg.bdimg.com/sys/portrait/item/public.1.555f8a99.3wEprjAsVjt3PxXcdOOxKw.jpg?_d=29568347"
 
 @Composable
-fun ComposeLesson06ImageScreen() {
+fun ComposeChapter06ImageScreen() {
     val sections = listOf(
         LearningSection(
             title = "1. 网络图片通常需要专门库来加载",
@@ -92,6 +92,6 @@ private fun ImagePlayground() {
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
-private fun ComposeLesson06ImagePreview() {
-    LessonPreviewContainer { ComposeLesson06ImageScreen() }
+private fun ComposeChapter06ImagePreview() {
+    LessonPreviewContainer { ComposeChapter06ImageScreen() }
 }

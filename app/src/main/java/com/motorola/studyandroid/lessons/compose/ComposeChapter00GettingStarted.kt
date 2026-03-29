@@ -28,7 +28,7 @@ private data class StarterSection(
 )
 
 @Composable
-fun ComposeLesson00GettingStartedScreen() {
+fun ComposeChapter00GettingStartedScreen() {
     val sections = listOf(
         StarterSection(
             title = "1. 一个 Android Compose 页面是怎么跑起来的？",
@@ -37,7 +37,7 @@ fun ComposeLesson00GettingStartedScreen() {
                 "在 MainActivity 的 setContent { ... } 里面，我们开始写 Compose 界面。",
                 "你可以把 setContent 理解成：'从这里开始，后面的内容都交给 Compose 来画在屏幕上。'"
             ),
-            code = "class MainActivity : ComponentActivity() {\n    override fun onCreate(savedInstanceState: Bundle?) {\n        super.onCreate(savedInstanceState)\n        setContent {\n            ComposeLesson01TextScreen()\n        }\n    }\n}"
+            code = "class MainActivity : ComponentActivity() {\n    override fun onCreate(savedInstanceState: Bundle?) {\n        super.onCreate(savedInstanceState)\n        setContent {\n            ComposeChapter01TextScreen()\n        }\n    }\n}"
         ),
         StarterSection(
             title = "2. 什么是 @Composable？",
@@ -172,7 +172,7 @@ private fun ComposeStateMiniDemo() {
 @Composable
 private fun Lesson0GettingStartedPreview() {
     LessonPreviewContainer {
-        ComposeLesson00GettingStartedScreen()
+        ComposeChapter00GettingStartedScreen()
     }
 }
 

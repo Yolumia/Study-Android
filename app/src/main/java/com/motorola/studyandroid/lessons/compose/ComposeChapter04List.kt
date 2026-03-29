@@ -26,7 +26,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun ComposeLesson04ListScreen() {
+fun ComposeChapter04ListScreen() {
     val sections = listOf(
         LearningSection(
             title = "1. LazyColumn 是 Compose 里的高性能纵向列表",
@@ -102,6 +102,6 @@ private fun TaskRow(task: String) {
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
-private fun ComposeLesson04ListPreview() {
-    LessonPreviewContainer { ComposeLesson04ListScreen() }
+private fun ComposeChapter04ListPreview() {
+    LessonPreviewContainer { ComposeChapter04ListScreen() }
 }

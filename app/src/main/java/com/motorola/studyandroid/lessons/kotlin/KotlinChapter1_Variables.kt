@@ -59,7 +59,19 @@ fun KotlinChapter1_Variables() {
                 BulletLine("score 是 var：每点击一次按钮，分数都要变化。")
                 VariablePlayground()
             }
+
+@Composable
+fun PracticeArea() {
+    // TODO: practice
+}
+
         }
+
+@Composable
+fun PracticeArea() {
+    // TODO: practice
+}
+
 
         renderPracticeSection(
             exercises = listOf(
@@ -69,12 +81,30 @@ fun KotlinChapter1_Variables() {
             )
         )
     }
+
+@Composable
+fun PracticeArea() {
+    // TODO: practice
 }
+
+}
+
+@Composable
+fun PracticeArea() {
+    // TODO: practice
+}
+
 
 @Composable
 private fun VariablePlayground() {
     val playerName = "Kotlin 新手"
     var score by remember { mutableIntStateOf(0) }
+
+@Composable
+fun PracticeArea() {
+    // TODO: practice
+}
+
 
     Column(modifier = Modifier.fillMaxWidth()) {
         Text(text = "玩家名字（val）：$playerName", style = MaterialTheme.typography.titleMedium)
@@ -84,13 +114,37 @@ private fun VariablePlayground() {
             modifier = Modifier.padding(top = 8.dp)
         )
         Button(
-            onClick = { score += 1 },
+            onClick = { score += 1 }
+
+@Composable
+fun PracticeArea() {
+    // TODO: practice
+}
+,
             modifier = Modifier.padding(top = 12.dp)
         ) {
             Text("点我 +1")
         }
-    }
+
+@Composable
+fun PracticeArea() {
+    // TODO: practice
 }
+
+    }
+
+@Composable
+fun PracticeArea() {
+    // TODO: practice
+}
+
+}
+
+@Composable
+fun PracticeArea() {
+    // TODO: practice
+}
+
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
@@ -98,4 +152,16 @@ private fun KotlinChapter1Preview() {
     LessonPreviewContainer {
         KotlinChapter1_Variables()
     }
+
+@Composable
+fun PracticeArea() {
+    // TODO: practice
 }
+
+}
+
+@Composable
+fun PracticeArea() {
+    // TODO: practice
+}
+

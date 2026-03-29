@@ -18,7 +18,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun ComposeLesson03StateScreen() {
+fun ComposeChapter03StateScreen() {
     val sections = listOf(
         LearningSection(
             title = "1. State 是 Compose 的核心概念之一",
@@ -91,6 +91,6 @@ private fun StatePlayground() {
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
-private fun ComposeLesson03StatePreview() {
-    LessonPreviewContainer { ComposeLesson03StateScreen() }
+private fun ComposeChapter03StatePreview() {
+    LessonPreviewContainer { ComposeChapter03StateScreen() }
 }

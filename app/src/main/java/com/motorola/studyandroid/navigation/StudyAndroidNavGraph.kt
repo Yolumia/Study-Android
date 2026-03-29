@@ -5,17 +5,17 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.motorola.studyandroid.lessons.compose.ComposeLesson00GettingStartedScreen
-import com.motorola.studyandroid.lessons.compose.ComposeLesson01TextScreen
-import com.motorola.studyandroid.lessons.compose.ComposeLesson02LayoutScreen
-import com.motorola.studyandroid.lessons.compose.ComposeLesson03StateScreen
-import com.motorola.studyandroid.lessons.compose.ComposeLesson04ListScreen
-import com.motorola.studyandroid.lessons.compose.ComposeLesson05InputScreen
-import com.motorola.studyandroid.lessons.compose.ComposeLesson06ImageScreen
-import com.motorola.studyandroid.lessons.compose.ComposeLesson07NetworkScreen
-import com.motorola.studyandroid.lessons.compose.ComposeLesson08NavigationScreen
-import com.motorola.studyandroid.lessons.compose.ComposeLesson09CoroutinesScreen
-import com.motorola.studyandroid.lessons.compose.ComposeLesson10PagerAndScrollScreen
+import com.motorola.studyandroid.lessons.compose.ComposeChapter00GettingStartedScreen
+import com.motorola.studyandroid.lessons.compose.ComposeChapter01TextScreen
+import com.motorola.studyandroid.lessons.compose.ComposeChapter02LayoutScreen
+import com.motorola.studyandroid.lessons.compose.ComposeChapter03StateScreen
+import com.motorola.studyandroid.lessons.compose.ComposeChapter04ListScreen
+import com.motorola.studyandroid.lessons.compose.ComposeChapter05InputScreen
+import com.motorola.studyandroid.lessons.compose.ComposeChapter06ImageScreen
+import com.motorola.studyandroid.lessons.compose.ComposeChapter07NetworkScreen
+import com.motorola.studyandroid.lessons.compose.ComposeChapter08NavigationScreen
+import com.motorola.studyandroid.lessons.compose.ComposeChapter09CoroutinesScreen
+import com.motorola.studyandroid.lessons.compose.ComposeChapter10PagerAndScrollScreen
 import com.motorola.studyandroid.lessons.java.JavaLesson01BasicsScreen
 import com.motorola.studyandroid.lessons.java.JavaLesson02JavaVsKotlinScreen
 import com.motorola.studyandroid.lessons.kotlin.KotlinChapter1_Variables
@@ -45,17 +45,17 @@ fun StudyAndroidNavGraph(
         composable(LessonCatalog.kotlinClasses.route) { KotlinChapter7_Classes() }
         composable(LessonCatalog.javaBasics.route) { JavaLesson01BasicsScreen() }
         composable(LessonCatalog.javaVsKotlin.route) { JavaLesson02JavaVsKotlinScreen() }
-        composable(LessonCatalog.gettingStarted.route) { ComposeLesson00GettingStartedScreen() }
-        composable(LessonCatalog.text.route) { ComposeLesson01TextScreen() }
-        composable(LessonCatalog.layout.route) { ComposeLesson02LayoutScreen() }
-        composable(LessonCatalog.state.route) { ComposeLesson03StateScreen() }
-        composable(LessonCatalog.list.route) { ComposeLesson04ListScreen() }
-        composable(LessonCatalog.input.route) { ComposeLesson05InputScreen() }
-        composable(LessonCatalog.pagerAndScroll.route) { ComposeLesson10PagerAndScrollScreen() }
-        composable(LessonCatalog.image.route) { ComposeLesson06ImageScreen() }
-        composable(LessonCatalog.network.route) { ComposeLesson07NetworkScreen() }
-        composable(LessonCatalog.navigation.route) { ComposeLesson08NavigationScreen(onNavigate = onNavigate) }
-        composable(LessonCatalog.coroutines.route) { ComposeLesson09CoroutinesScreen() }
+        composable(LessonCatalog.gettingStarted.route) { ComposeChapter00GettingStartedScreen() }
+        composable(LessonCatalog.text.route) { ComposeChapter01TextScreen() }
+        composable(LessonCatalog.layout.route) { ComposeChapter02LayoutScreen() }
+        composable(LessonCatalog.state.route) { ComposeChapter03StateScreen() }
+        composable(LessonCatalog.list.route) { ComposeChapter04ListScreen() }
+        composable(LessonCatalog.input.route) { ComposeChapter05InputScreen() }
+        composable(LessonCatalog.pagerAndScroll.route) { ComposeChapter10PagerAndScrollScreen() }
+        composable(LessonCatalog.image.route) { ComposeChapter06ImageScreen() }
+        composable(LessonCatalog.network.route) { ComposeChapter07NetworkScreen() }
+        composable(LessonCatalog.navigation.route) { ComposeChapter08NavigationScreen(onNavigate = onNavigate) }
+        composable(LessonCatalog.coroutines.route) { ComposeChapter09CoroutinesScreen() }
     }
 }
 

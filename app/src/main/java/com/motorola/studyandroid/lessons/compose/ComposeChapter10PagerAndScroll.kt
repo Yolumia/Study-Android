@@ -32,7 +32,7 @@ private val pagerPages = listOf(
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun ComposeLesson10PagerAndScrollScreen() {
+fun ComposeChapter10PagerAndScrollScreen() {
     val sections = listOf(
         LearningSection(
             title = "1. 横向滚动不止一种实现方式",
@@ -137,8 +137,8 @@ private fun PagerPlayground() {
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
-private fun ComposeLesson10PagerAndScrollPreview() {
+private fun ComposeChapter10PagerAndScrollPreview() {
     LessonPreviewContainer {
-        ComposeLesson10PagerAndScrollScreen()
+        ComposeChapter10PagerAndScrollScreen()
     }
 }

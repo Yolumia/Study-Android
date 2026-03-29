@@ -31,7 +31,7 @@ private data class CoroutineSection(
 )
 
 @Composable
-fun ComposeLesson09CoroutinesScreen() {
+fun ComposeChapter09CoroutinesScreen() {
     val sections = listOf(
         CoroutineSection(
             title = "1. 为什么要学协程？",
@@ -151,7 +151,7 @@ private suspend fun fakeLoadGreeting(): String {
 @Composable
 private fun Lesson9CoroutinesPreview() {
     LessonPreviewContainer {
-        ComposeLesson09CoroutinesScreen()
+        ComposeChapter09CoroutinesScreen()
     }
 }
 

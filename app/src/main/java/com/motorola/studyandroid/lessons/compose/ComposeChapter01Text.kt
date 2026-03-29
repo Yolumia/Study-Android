@@ -20,7 +20,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun ComposeLesson01TextScreen() {
+fun ComposeChapter01TextScreen() {
     val sections = listOf(
         LearningSection(
             title = "1. Text 是 Compose 里最基础的显示组件",
@@ -95,8 +95,8 @@ private fun TextStylePlayground() {
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
-private fun ComposeLesson01TextPreview() {
+private fun ComposeChapter01TextPreview() {
     LessonPreviewContainer {
-        ComposeLesson01TextScreen()
+        ComposeChapter01TextScreen()
     }
 }

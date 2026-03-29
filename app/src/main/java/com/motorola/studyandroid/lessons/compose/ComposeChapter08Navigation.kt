@@ -12,7 +12,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun ComposeLesson08NavigationScreen(onNavigate: (String) -> Unit) {
+fun ComposeChapter08NavigationScreen(onNavigate: (String) -> Unit) {
     val sections = listOf(
         LearningSection(
             title = "1. 导航本质上是在切换 route",
@@ -21,7 +21,7 @@ fun ComposeLesson08NavigationScreen(onNavigate: (String) -> Unit) {
                 "NavController 负责发出跳转命令。",
                 "NavHost 负责根据 route 把正确页面显示出来。"
             ),
-            code = "composable(\"Lesson1\") { ComposeLesson01TextScreen() }"
+            code = "composable(\"Lesson1\") { ComposeChapter01TextScreen() }"
         ),
         LearningSection(
             title = "2. 页面跳转常见两个动作",
@@ -62,6 +62,6 @@ fun ComposeLesson08NavigationScreen(onNavigate: (String) -> Unit) {
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
-private fun ComposeLesson08NavigationPreview() {
-    LessonPreviewContainer { ComposeLesson08NavigationScreen(onNavigate = {}) }
+private fun ComposeChapter08NavigationPreview() {
+    LessonPreviewContainer { ComposeChapter08NavigationScreen(onNavigate = {}) }
 }

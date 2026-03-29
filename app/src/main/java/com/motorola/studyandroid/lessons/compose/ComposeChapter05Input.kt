@@ -18,7 +18,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun ComposeLesson05InputScreen() {
+fun ComposeChapter05InputScreen() {
     val sections = listOf(
         LearningSection(
             title = "1. 输入框本质上是界面 + 状态的组合",
@@ -87,6 +87,6 @@ private fun InputPlayground() {
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
-private fun ComposeLesson05InputPreview() {
-    LessonPreviewContainer { ComposeLesson05InputScreen() }
+private fun ComposeChapter05InputPreview() {
+    LessonPreviewContainer { ComposeChapter05InputScreen() }
 }
